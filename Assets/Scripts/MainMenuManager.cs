@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour {
 
@@ -25,6 +26,11 @@ public class MainMenuManager : MonoBehaviour {
 	public void OpenLinks(string link)
 	{
 		Application.OpenURL (link);
+	}
+
+	public void OpenScenes(string scene)
+	{
+		SceneManager.LoadScene(scene);
 	}
 
 	public void SoundBtnOnClick()
