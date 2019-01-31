@@ -11,11 +11,14 @@ public class MainMenuManager : MonoBehaviour {
 	public Sprite soundOFF;
 	public Button soundBtn;
 	public Text soundBtnText;
+	public GameObject[] cursors = new GameObject[3];
 
 	private static bool sound = true;
 	// Use this for initialization
-	void Start () {
-		
+	void Start () 
+	{
+		SelectedCharacter(Config.selectedCharacter);	
+		Config.gameOver = false;
 	}
 	
 	// Update is called once per frame
@@ -46,5 +49,15 @@ public class MainMenuManager : MonoBehaviour {
 			soundBtn.GetComponent<Image>().sprite = soundOFF;
 			soundBtnText.color = Color.white;
 		}
+	}
+
+	public void SelectedCharacter(int character)
+	{
+		foreach (GameObject cursor in cursors)
+		{
+			cursor.SetActive(false);
+		}
+		cursors[character].SetActive(true);
+		Config.selectedCharacter = character;
 	}
 }

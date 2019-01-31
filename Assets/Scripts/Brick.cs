@@ -49,4 +49,12 @@ public class Brick : MonoBehaviour
 		rb.velocity = -dis.normalized * maxVel * dis.magnitude / springRange;
 		PlayerPrefs.SetInt("wasLaunched", 1);
 	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if(col.gameObject.name == "BottomLimitBar")
+		{
+			Config.gameOver = true;
+		}	
+	}
 }

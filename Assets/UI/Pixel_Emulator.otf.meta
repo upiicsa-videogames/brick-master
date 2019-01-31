@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd537c67d655343dc94bccdcbbaab32a
+guid: 2aaa1c746285b994eb963f6fac01ca1c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Pixel Emulator
   fontNames:
   - Pixel Emulator
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bd537c67d655343dc94bccdcbbaab32a, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
